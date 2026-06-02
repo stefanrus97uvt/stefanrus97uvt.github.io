@@ -1,0 +1,97 @@
+/* card.css – Business Card page styles */
+
+/* Element selector: body baseline */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #0d1117;
+  color: #f0f6fc;
+  margin: 0;
+  padding: 2rem;
+}
+
+/* Class selector: card container */
+.card-container {
+  max-width: 420px;
+  margin: 3rem auto;
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+}
+
+/* Element + class selector: avatar circle */
+.card-container .avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #21262d;
+  border: 2px solid #30363d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #79c0ff;
+  margin: 0 auto 1.25rem auto;
+  overflow: hidden;
+}
+
+.card-container .avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Element selector: name heading */
+h1 {
+  font-size: 1.4rem;
+  color: #ffffff;
+  margin: 0 0 0.25rem 0;
+}
+
+/* Class selector: specialization line */
+.specialization {
+  font-size: 0.9rem;
+  color: #b1bac4;
+  margin-bottom: 1.5rem;
+}
+
+/* Class selector: divider */
+.divider {
+  border: none;
+  border-top: 1px solid #30363d;
+  margin: 1.25rem 0;
+}
+
+/* Class selector: links list */
+.card-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Element selector: links */
+a {
+  color: #79c0ff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #c8e6ff;
+  text-decoration: underline;
+}
+
+/* ID selector: email link – unique element on the page */
+#email-link {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+/* ID selector: github link – unique element on the page */
+#github-link {
+  font-style: italic;
+}

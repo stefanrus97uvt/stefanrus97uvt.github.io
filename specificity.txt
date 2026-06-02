@@ -1,0 +1,16 @@
+1) Explain which CSS properties each paragraph (A, B, C, D) receives and where each property comes from: element selector, class selector, or id selector.
+
+Paragraph A takes default configuration from element selector <p> defined in the <style> as p {...}
+Paragraph B takes the styling from class selector "info" and is mentioned in the <style> as .info {...}
+Paragraph C takes its styling from id selector "warning" and is mentioned in the <style> as #warning {...}
+Paragraph D takes its styling from a combination of id and class selector mentioned in the <style> as #special.info {...}
+
+2) Paragraph D matches p, .info, #warning, and #warning.info. All four define color — which value does the browser use and why? What about font-family: which rule wins and why?
+
+Paragraph D is defined by all 4 rules element, id, class and id&class rules and applies them in reverse order from the most specific selector to the least one.
+The order is as follows: ID&Class selector, ID selector, Class selector and finally the element selector.
+Therefore the color used by the browser is darkorange and the font-family is the one specified in the ID selector ("font-family: 'Courier New', monospace;")
+
+3) Create an external CSS file called style.css and add properties for an h1 title: choose a color, set a font-style, and add padding: 10px;. Then, in the body, create an h1 with the text title1 and check the result. After that, in the same HTML file, add an internal CSS rule for h1 inside the <style> tag in the <head> and change the color. Check the result and explain what happens.
+
+What happens is that the internal style overwrites the external file styling and I think this is due to the specificity factor as the style.css is an external stylesheet with a set of rules that can generally be applied to all *.html files, while the internal style is more specific, file-wise.

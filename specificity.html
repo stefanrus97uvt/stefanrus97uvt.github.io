@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Specificity Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        p {
+            color: gray;
+            font-size: 1rem;
+            font-family: Georgia, serif;
+            line-height: 1.4;
+            padding: 4px 0;
+        }
+
+        .info {
+            color: steelblue;
+            font-size: 1.25rem;
+            background-color: #e8f4fd;
+            padding: 8px 14px;
+            border-left: 5px solid steelblue;
+            font-family: Arial, sans-serif;
+        }
+
+        #warning {
+            color: darkred;
+            font-size: 0.8rem;
+            font-style: italic;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            border: 2px dashed darkred;
+            padding: 10px;
+            background-color: #fff0f0;
+            font-family: 'Courier New', monospace;
+        }
+
+        #special.info {
+            color: darkorange;
+            background-color: #fff7e0;
+            border: 2px solid darkorange;
+            font-size: 1.1rem;
+            font-style: normal;
+            letter-spacing: 0.03em;
+        }
+
+        h1 {
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+
+    <p>Paragraph A</p>
+
+    <p class="info">Paragraph B</p>
+
+    <p id="warning">Paragraph C</p>
+
+    <p class="info" id="special">Paragraph D</p>
+
+    <h1>This is a test for Lab4</h1>
+</body>
+</html>

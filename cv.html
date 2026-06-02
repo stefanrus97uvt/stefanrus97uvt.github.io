@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio – Stefan Rus</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header>
+      <a href="index.html" class="site-title">Stefan Rus</a>
+      <p class="site-subtitle">IT Manager &amp; Computer Science Student</p>
+    </header>
+
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About / CV</a></li>
+        <li><a href="data.html">Experience</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="overview.html">Overview</a></li>
+        <li><a href="chatbot.html">Chatbot</a></li>
+        <li><a href="cv.html" aria-current="page">Portfolio</a></li>
+      </ul>
+    </nav>
+
+    <main id="main-content">
+
+      <h1>My Projects</h1>
+      <p>Use the form below to add a project. After successful submission the project appears in the table at the bottom of this page.</p>
+
+      <!-- ADD PROJECT FORM -->
+      <section aria-labelledby="form-heading">
+        <h2 id="form-heading">Add a Project</h2>
+
+        <div class="form-wrapper">
+          <form id="project-form" novalidate>
+
+            <!-- Project Name (type="text") -->
+            <div class="form-group">
+              <label for="proj-name">
+                Project Name
+                <span class="required-mark" aria-hidden="true">*</span>
+              </label>
+              <input
+                type="text"
+                id="proj-name"
+                name="proj-name"
+                required
+                autocomplete="off"
+                placeholder="e.g. TISAX Certification Implementation"
+                aria-describedby="err-proj-name"
+              >
+              <span class="field-error" id="err-proj-name" role="alert"></span>
+            </div>
+
+            <!-- Description (textarea) -->
+            <div class="form-group">
+              <label for="proj-desc">
+                Description
+                <span class="required-mark" aria-hidden="true">*</span>
+              </label>
+              <textarea
+                id="proj-desc"
+                name="proj-desc"
+                rows="4"
+                required
+                placeholder="Briefly describe the project, its goals, and outcome..."
+                aria-describedby="err-proj-desc"
+              ></textarea>
+              <span class="field-error" id="err-proj-desc" role="alert"></span>
+            </div>
+
+            <!-- Project URL (type="url") -->
+            <div class="form-group">
+              <label for="proj-url">
+                Project URL
+                <span class="required-mark" aria-hidden="true">*</span>
+              </label>
+              <input
+                type="url"
+                id="proj-url"
+                name="proj-url"
+                required
+                placeholder="https://github.com/username/project"
+                aria-describedby="err-proj-url"
+              >
+              <span class="field-error" id="err-proj-url" role="alert"></span>
+            </div>
+
+            <!-- Technologies (type="text") -->
+            <div class="form-group">
+              <label for="proj-tech">
+                Technologies
+                <span class="required-mark" aria-hidden="true">*</span>
+              </label>
+              <input
+                type="text"
+                id="proj-tech"
+                name="proj-tech"
+                required
+                placeholder="e.g. HTML, CSS, JavaScript, VMware"
+                aria-describedby="proj-tech-hint err-proj-tech"
+              >
+              <p class="form-hint" id="proj-tech-hint">Separate each technology with a comma.</p>
+              <span class="field-error" id="err-proj-tech" role="alert"></span>
+            </div>
+
+            <!-- Category (select inside fieldset/legend) -->
+            <fieldset>
+              <legend>
+                Category
+                <span class="required-mark" aria-hidden="true">*</span>
+              </legend>
+              <select
+                id="proj-cat"
+                name="proj-cat"
+                required
+                aria-describedby="err-proj-cat"
+              >
+                <option value="">-- Select a category --</option>
+                <option value="Web Development">Web Development</option>
+                <option value="IT Infrastructure">IT Infrastructure</option>
+                <option value="Security">Security</option>
+                <option value="Automation">Automation</option>
+                <option value="Academic">Academic</option>
+                <option value="Other">Other</option>
+              </select>
+              <span class="field-error" id="err-proj-cat" role="alert"></span>
+            </fieldset>
+
+            <!-- Completion Date (type="date") -->
+            <div class="form-group">
+              <label for="proj-date">
+                Completion Date
+                <span class="required-mark" aria-hidden="true">*</span>
+              </label>
+              <input
+                type="date"
+                id="proj-date"
+                name="proj-date"
+                required
+                aria-describedby="err-proj-date"
+              >
+              <span class="field-error" id="err-proj-date" role="alert"></span>
+            </div>
+
+            <!-- Team Size (type="number", optional) -->
+            <div class="form-group">
+              <label for="proj-team">Team Size</label>
+              <input
+                type="number"
+                id="proj-team"
+                name="proj-team"
+                min="1"
+                max="500"
+                placeholder="e.g. 3"
+                aria-describedby="proj-team-hint err-proj-team"
+              >
+              <p class="form-hint" id="proj-team-hint">Optional &mdash; number of people involved in this project.</p>
+              <span class="field-error" id="err-proj-team" role="alert"></span>
+            </div>
+
+            <!-- Thumbnail (type="file") -->
+            <div class="form-group">
+              <label for="proj-img">
+                Project Thumbnail
+                <span class="required-mark" aria-hidden="true">*</span>
+              </label>
+              <input
+                type="file"
+                id="proj-img"
+                name="proj-img"
+                accept="image/*"
+                required
+                aria-describedby="proj-img-hint err-proj-img"
+              >
+              <p class="form-hint" id="proj-img-hint">Select an image from your device (JPG, PNG, GIF, WebP).</p>
+              <img
+                id="img-preview"
+                class="img-preview"
+                src=""
+                alt=""
+                hidden
+              >
+              <span class="field-error" id="err-proj-img" role="alert"></span>
+            </div>
+
+            <!-- Form buttons -->
+            <div class="form-buttons">
+              <button type="submit">Add Project</button>
+              <button type="reset">Reset</button>
+            </div>
+
+          </form>
+        </div>
+      </section>
+
+      <!-- PROJECTS TABLE -->
+      <section aria-labelledby="table-heading">
+        <h2 id="table-heading">Project List</h2>
+
+        <p id="no-projects-msg" class="no-projects-msg">
+          No projects added yet. Use the form above to add your first project.
+        </p>
+
+        <div class="table-wrapper" id="table-container" hidden>
+          <table id="projects-table">
+            <caption>Projects submitted via the form above, listed in order of addition.</caption>
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Description</th>
+                <th scope="col">URL</th>
+                <th scope="col">Technologies</th>
+                <th scope="col">Thumbnail</th>
+                <th scope="col">Completion Date</th>
+              </tr>
+            </thead>
+            <tbody id="projects-tbody">
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Stefan Rus &mdash; Oradea, Romania &mdash; <a href="mailto:stefan.97.rus@gmail.com">stefan.97.rus@gmail.com</a></p>
+    </footer>
+
+    <script src="cv.js"></script>
+  </body>
+</html>

@@ -1,0 +1,273 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overview – Stefan Rus</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Internal CSS: page-specific overrides for overview layout -->
+    <style>
+      .overview-grid {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas:
+          "profile  profile"
+          "skills   projects"
+          "contact  contact";
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+      }
+
+      .ov-profile  { grid-area: profile; }
+      .ov-skills   { grid-area: skills; }
+      .ov-projects { grid-area: projects; }
+      .ov-contact  { grid-area: contact; }
+
+      /* Section panels */
+      .ov-panel {
+        background-color: #161b22;
+        border: 1px solid #30363d;
+        border-radius: 6px;
+        padding: 1.25rem 1.5rem;
+      }
+
+      /* Profile: Flexbox inside */
+      .ov-profile-inner {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+      }
+
+      .ov-avatar {
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        background-color: #21262d;
+        border: 1px solid #30363d;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: #79c0ff;
+        flex-shrink: 0;
+        overflow: hidden;
+      }
+
+      .ov-avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* Skills list: Flexbox */
+      .ov-skill-list {
+        list-style: none;
+        padding: 0;
+        margin: 0.75rem 0 0 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+      }
+
+      .ov-skill-list li::before {
+        content: "› ";
+        color: #79c0ff;
+      }
+
+      /* Projects: Grid of cards */
+      .ov-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+        margin-top: 0.75rem;
+      }
+
+      .ov-card {
+        background-color: #0d1117;
+        border: 1px solid #30363d;
+        border-radius: 6px;
+        padding: 1rem;
+      }
+
+      .ov-card h3 {
+        font-size: 0.9rem;
+        color: #ffffff;
+        margin-bottom: 0.3rem;
+      }
+
+      .ov-card p {
+        font-size: 0.82rem;
+        color: #cdd9e5;
+        margin: 0;
+      }
+
+      /* Featured card: styled differently */
+      .ov-card-featured {
+        background-color: #1f2a3a;
+        border-color: #79c0ff;
+      }
+
+      .ov-card-featured h3 {
+        color: #79c0ff;
+      }
+
+      /* Contact: Flexbox row */
+      .ov-contact-list {
+        list-style: none;
+        padding: 0;
+        margin: 0.75rem 0 0 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem 2rem;
+      }
+
+      .ov-contact-list li {
+        font-size: 0.9rem;
+        color: #cdd9e5;
+      }
+
+      .ov-contact-list li strong {
+        color: #79c0ff;
+        display: block;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 0.1rem;
+      }
+
+      /* Media query: single column on small screens */
+      @media (max-width: 650px) {
+        .overview-grid {
+          grid-template-columns: 1fr;
+          grid-template-areas:
+            "profile"
+            "skills"
+            "projects"
+            "contact";
+        }
+
+        .ov-cards {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header>
+      <a href="index.html" class="site-title">Stefan Rus</a>
+      <p class="site-subtitle">IT Manager &amp; Computer Science Student</p>
+    </header>
+
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About / CV</a></li>
+        <li><a href="data.html">Experience</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="overview.html" aria-current="page">Overview</a></li>
+        <li><a href="chatbot.html">Chatbot</a></li>
+        <li><a href="cv.html">Portfolio</a></li>
+      </ul>
+    </nav>
+
+    <main id="main-content">
+
+      <h1>Portfolio Overview</h1>
+      <p>A snapshot of who I am, what I know, what I've built, and how to reach me.</p>
+
+      <div class="overview-grid">
+
+        <!-- PROFILE -->
+        <section class="ov-panel ov-profile" aria-labelledby="ov-profile-h">
+          <h2 id="ov-profile-h">Profile</h2>
+          <div class="ov-profile-inner">
+            <div class="ov-avatar" aria-hidden="true"><img src="./me.png" alt="" /></div>
+            <div>
+              <h3 style="font-size:1.1rem; margin-bottom:0.25rem;">Stefan Rus</h3>
+              <p style="margin:0; color:#b1bac4; font-size:0.9rem;">IT Manager &bull; B.Sc. Computer Science, Year 1</p>
+              <p style="margin:0.5rem 0 0 0; font-size:0.88rem; color:#cdd9e5;">7+ years of IT experience across 4 European countries. Currently studying at West University of Timi&#x219;oara to formalise my technical background.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section class="ov-panel ov-skills" aria-labelledby="ov-skills-h">
+          <h2 id="ov-skills-h">Skills</h2>
+          <ul class="ov-skill-list">
+            <li>VMware &amp; Hyper-V virtualisation</li>
+            <li>Windows Server / Active Directory</li>
+            <li>Network configuration &amp; monitoring</li>
+            <li>Veeam Backup &amp; disaster recovery</li>
+            <li>M365 administration</li>
+            <li>HTML5, CSS3, JavaScript (beginner)</li>
+            <li>English C1/C2 &bull; Italian B1</li>
+          </ul>
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="ov-panel ov-projects" aria-labelledby="ov-projects-h">
+          <h2 id="ov-projects-h">Projects</h2>
+          <div class="ov-cards">
+
+            <!-- Featured card -->
+            <article class="ov-card ov-card-featured">
+              <h3>Portfolio Website</h3>
+              <p>Personal site built for the Web Design course at UVT. HTML5, CSS3, JS.</p>
+            </article>
+
+            <article class="ov-card">
+              <h3>TISAX Certification</h3>
+              <p>Led the TISAX security certification process across all 4 Reinert subsidiaries.</p>
+            </article>
+
+            <article class="ov-card">
+              <h3>IT Infrastructure Rollout</h3>
+              <p>Deployed VMware + Veeam across the Romanian subsidiary from scratch.</p>
+            </article>
+
+            <article class="ov-card">
+              <h3>Process Automation</h3>
+              <p>Used AI tools and MS Access databases to automate repetitive reporting tasks.</p>
+            </article>
+
+          </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="ov-panel ov-contact" aria-labelledby="ov-contact-h">
+          <h2 id="ov-contact-h">Contact</h2>
+          <ul class="ov-contact-list">
+            <li>
+              <strong>Email</strong>
+              <a href="mailto:stefan.97.rus@gmail.com">stefan.97.rus@gmail.com</a>
+            </li>
+            <li>
+              <strong>Phone</strong>
+              <a href="tel:+40771480358">(+40) 771 480 358</a>
+            </li>
+            <li>
+              <strong>Location</strong>
+              Oradea / Timi&#x219;oara, Romania
+            </li>
+            <li>
+              <strong>GitHub</strong>
+              <a href="https://github.com/CS-WD-UVT-2026" target="_blank" rel="noopener noreferrer">CS-WD-UVT-2026</a>
+            </li>
+          </ul>
+        </section>
+
+      </div>
+
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Stefan Rus &mdash; Oradea, Romania &mdash; <a href="mailto:stefan.97.rus@gmail.com">stefan.97.rus@gmail.com</a></p>
+    </footer>
+
+  </body>
+</html>

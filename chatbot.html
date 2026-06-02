@@ -1,0 +1,63 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot – Stefan Rus</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="chatbot.css">
+  </head>
+  <body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header>
+      <a href="index.html" class="site-title">Stefan Rus</a>
+      <p class="site-subtitle">IT Manager &amp; Computer Science Student</p>
+    </header>
+
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About / CV</a></li>
+        <li><a href="data.html">Experience</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="overview.html">Overview</a></li>
+        <li><a href="chatbot.html" aria-current="page">Chatbot</a></li>
+        <li><a href="cv.html">Portfolio</a></li>
+      </ul>
+    </nav>
+
+    <main id="main-content">
+
+      <h1>IT Quiz Chatbot</h1>
+      <p>Answer the questions below. Type your answer and press <strong>Send</strong> or hit <strong>Enter</strong>.</p>
+
+      <section aria-labelledby="chat-heading" class="chat-wrapper">
+        <h2 id="chat-heading">Chat</h2>
+
+        <p class="score-bar" id="score-bar">Score: 0 / 0</p>
+
+        <div class="chat-box" id="chat-box" role="log" aria-live="polite" aria-label="Chat messages"></div>
+
+        <form class="chat-form" id="chat-form">
+          <input
+            type="text"
+            id="user-input"
+            placeholder="Type your answer here…"
+            autocomplete="off"
+            aria-label="Your answer"
+          >
+          <button type="submit">Send</button>
+        </form>
+      </section>
+
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Stefan Rus &mdash; Oradea, Romania &mdash; <a href="mailto:stefan.97.rus@gmail.com">stefan.97.rus@gmail.com</a></p>
+    </footer>
+
+    <script src="chatbot.js"></script>
+  </body>
+</html>

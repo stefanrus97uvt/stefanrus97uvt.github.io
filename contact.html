@@ -1,0 +1,132 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact – Stefan Rus</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header>
+      <a href="index.html" class="site-title">Stefan Rus</a>
+      <p class="site-subtitle">IT Manager &amp; Computer Science Student</p>
+    </header>
+
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About / CV</a></li>
+        <li><a href="data.html">Experience</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+        <li><a href="overview.html">Overview</a></li>
+        <li><a href="chatbot.html">Chatbot</a></li>
+        <li><a href="cv.html">Portfolio</a></li>
+      </ul>
+    </nav>
+
+    <main id="main-content">
+
+      <h1>Get in Touch</h1>
+      <p>Have a collaboration proposal, a project idea, or a question about my work? Fill in the form below and I'll get back to you as soon as possible.</p>
+
+      <!-- CONTACT FORM -->
+      <section aria-labelledby="form-heading">
+        <h2 id="form-heading">Send a Message</h2>
+
+        <div class="form-wrapper">
+          <form action="#" method="post" novalidate>
+
+            <!-- NAME -->
+            <fieldset class="form-group">
+              <legend>Full Name <span class="required-mark" aria-hidden="true">*</span></legend>
+              <input
+                type="text"
+                id="full-name"
+                name="full-name"
+                autocomplete="name"
+                required
+                placeholder="e.g. Maria Ionescu"
+              >
+            </fieldset>
+
+            <!-- EMAIL -->
+            <fieldset class="form-group">
+              <legend>Email Address <span class="required-mark" aria-hidden="true">*</span></legend>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+                required
+                placeholder="you@example.com"
+              >
+            </fieldset>
+
+            <!-- COMPANY / ORGANISATION -->
+            <fieldset class="form-group">
+              <legend>Company or Organisation (optional)</legend>
+              <input
+                type="text"
+                id="company"
+                name="company"
+                autocomplete="organization"
+                placeholder="e.g. Acme SRL"
+              >
+            </fieldset>
+
+            <!-- SUBJECT -->
+            <fieldset class="form-group">
+              <legend>Subject <span class="required-mark" aria-hidden="true">*</span></legend>
+              <select id="subject" name="subject" required>
+                <option value="">-- Please select a topic --</option>
+                <option value="it-consulting">IT consulting or project</option>
+                <option value="collaboration">Academic collaboration</option>
+                <option value="networking">Professional networking</option>
+                <option value="feedback">Feedback</option>
+                <option value="other">Other</option>
+              </select>
+            </fieldset>
+
+
+            <!-- MESSAGE -->
+            <fieldset class="form-group">
+              <legend>Message <span class="required-mark" aria-hidden="true">*</span></legend>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+                placeholder="Write your message here..."
+              ></textarea>
+              <p class="form-hint">Please include as much detail as possible so I can respond helpfully.</p>
+            </fieldset>
+
+            <!-- SUBMIT -->
+            <button type="submit">Send Message</button>
+
+          </form>
+        </div>
+      </section>
+
+      <!-- DIRECT CONTACT -->
+      <section aria-labelledby="direct-heading">
+        <h2 id="direct-heading">Direct Contact</h2>
+        <ul>
+          <li><strong>Email:</strong> <a href="mailto:stefan.97.rus@gmail.com">stefan.97.rus@gmail.com</a></li>
+          <li><strong>Phone:</strong> <a href="tel:+40771480358">(+40) 771 480 358</a></li>
+          <li><strong>Location:</strong> Oradea / Timișoara, Romania</li>
+        </ul>
+        <p style="margin-top: 1rem;">I typically respond within 2–3 business days.</p>
+      </section>
+
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Stefan Rus &mdash; Oradea, Romania &mdash; <a href="mailto:stefan.97.rus@gmail.com">stefan.97.rus@gmail.com</a></p>
+    </footer>
+
+  </body>
+</html>
